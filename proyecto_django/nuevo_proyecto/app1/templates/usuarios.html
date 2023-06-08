@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block contenido %}
+<div class="card my-3 mx-2">
+
+
+  <div class="card-header">Lista de usuarios</div>
+  <div class="card-body">
+<table class="table">
+<thead>
+  <tr>
+    <th>Nombre</th>
+    <th>Apellido</th>
+    <th>Email</th>
+    <th>Profesion</th>
+     <th>Edad</th>
+    <th>Dirección</th>
+    <th>Comuna</th>
+  </tr>
+</thead>
+<tbody>{% for usuario in usuarios %}
+  <tr>
+    <td><a href="/ingresar-datos/{{usuario.user.id}}">
+      {{usuario.user.first_name}} </a
+    ></td>
+    <td>{{usuario.user.last_name}}</td>
+    <td>
+      {{usuario.user.email}}
+    </td>
+       <td>
+      {{usuario.profesion}}
+    </td>
+       <td>
+      {{usuario.edad}}
+    </td>
+       <td>
+      {{usuario.direccion}}
+    </td>
+       <td>
+      {{usuario.comuna}}
+    </td>
+  </tr>  {% endfor %}
+</tbody>
+</table>
+ 
+  </div>
+    
+    
+ 
+
+
+{% endblock %}

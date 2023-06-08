@@ -1,0 +1,38 @@
+
+
+{% extends 'base.html' %} {% block contenido %}
+
+<div class="row justify-content-center">
+  <div class="col-sm-4">
+    <div class="card  my-4">
+<div class="card-header text-center">
+  <h2>Registro de usuario</h2>
+  {% load static %}
+  <div class="contenedor_imagen"> <img src="{% static 'logo_1.png' %}" alt="Logo" width="100"></div>
+ 
+</div>
+<div class="card-body">
+
+      <form method="post">
+      {% csrf_token %} {{ formulario_usuario.username}} <br />
+      {{ formulario_usuario.first_name}} <br />
+      {{ formulario_usuario.last_name}} <br />
+      {{ formulario_usuario.email}} <br />
+      {{ formulario_usuario.password}} <br />
+      {{formulario_perfil_usuario.profesion}}<br>
+      {{formulario_perfil_usuario.edad}}<br>
+       {{formulario_perfil_usuario.prefesion}}<br />
+      {{formulario_perfil_usuario.direccion}}<br />
+       {{formulario_perfil_usuario.comuna}}<br />
+
+      <button type="submit" class="btn btn-primary">Registrar</button>
+    </form>
+</div>
+
+
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}

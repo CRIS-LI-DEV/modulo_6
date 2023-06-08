@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block contenido %}
+<div class="card my-3 mx-3">
+
+    <div class="card-header">
+Nombre de usuario : {{usuario.user.username}}
+    </div>
+    <div class="card-body">
+
+
+<table class="table">
+<tbody>
+<tr>
+    <td>NOMBRE</td>
+    <td>{{usuario.user.first_name}}</td>
+</tr>
+
+<tr>
+    <td>APELLIDO</td>
+    <td>{{usuario.user.last_name}}</td>
+</tr>
+
+<tr>
+    <td>EDAD</td>
+    <td>{{usuario.edad}}</td>
+</tr>
+
+<tr>
+    <td>EMAIL</td>
+    <td>{{usuario.user.email}}</td>
+</tr>
+<tr>
+    <td>PROFESION</td>
+    <td>{{usuario.profesion}}</td>
+</tr>
+<tr>
+    <td>DIRECCION</td>
+    <td>{{usuario.direccion}}</td>
+</tr>
+
+<tr>
+    <td>COMUNA</td>
+    <td>{{usuario.comuna}}</td>
+</tr>
+</tbody>
+
+
+</table>
+
+    </div>
+</div>
+
+
+{% endblock %}

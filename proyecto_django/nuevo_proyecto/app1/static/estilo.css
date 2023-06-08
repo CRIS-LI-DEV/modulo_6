@@ -1,0 +1,35 @@
+ @import url('https://fonts.googleapis.com/css2?family=Geologica:wght@200&display=swap');
+ *{
+    font-family: 'Geologica', sans-serif;
+    background-color: #FFCB00;
+ }
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+
+    .row.content {height: 450px}
+    
+  
+    .sidenav {
+      padding-top: 20px;
+      background-color: #ceece7ee;
+      height: 100%;
+    }
+    
+
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+  
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
