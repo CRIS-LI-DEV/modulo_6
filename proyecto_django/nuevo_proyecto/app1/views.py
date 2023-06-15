@@ -12,7 +12,7 @@ from django.contrib.auth.hashers import make_password
 def perfil_usuario(request):
     usuarios = PerfilDeUsuario.objects.all()
     return render(request, 'usuarios.html', {'usuarios': usuarios})
-from django.shortcuts import render
+
 
 
 def ingresar_datos_view(request, user_id):
@@ -78,7 +78,7 @@ def usuario_login(request):
                 if user is not None:
                     if user.is_active:
                         login(request,user)
-                        return  render(request,'logueo_exitoso.html')
+                        return  redirect('/logueo_exitoso/')
                     else:
                         return  render(request,'cuenta_desactivada.html')
                 else:
@@ -92,3 +92,15 @@ def logout_view(request):
     print('logout')
     logout(request)
     return redirect('/') 
+
+ 
+def logueo_exitoso(request):
+    print(f"logueo { request.user}")
+    perfil = PerfilDeUsuario.objects.get(user_id=request.user.id)
+    context={
+        'perfil':perfil
+    }
+    return render(request,'logueo_exitoso.html',context)
+
+def galeria(request):
+    return render(request,'pagina_priv_cliente.html'  ) 

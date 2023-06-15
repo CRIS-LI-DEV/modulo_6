@@ -19,9 +19,7 @@
 </thead>
 <tbody>{% for usuario in usuarios %}
   <tr>
-    <td><a href="/ingresar-datos/{{usuario.user.id}}">
-      {{usuario.user.first_name}} </a
-    ></td>
+    <td>{{usuario.user.first_name}} </td>
     <td>{{usuario.user.last_name}}</td>
     <td>
       {{usuario.user.email}}

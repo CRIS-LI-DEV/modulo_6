@@ -33,3 +33,64 @@
       }
       .row.content {height:auto;} 
     }
+
+
+    @import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+      * {
+      font-family: 'Prompt', sans-serif;
+      }
+      body {
+        background-image: url("{% static 'fondo2.jpg' %}");
+        background-size: 100% 80%;
+      }
+
+      .card {
+        color: #212529;
+        border: none;
+      }
+      .card input {
+        background-color: #212529;
+        color: yellow;
+
+        border: none;
+      }
+      .card input:placeholder-shown {
+        background-color: #212529;
+        color: yellow;
+
+        color: #ffff6a;
+        border: none;
+      }
+      .card-header {
+        background-color: #212529;
+        color: yellow;
+      }
+      .card input:focus {
+        background-color: #212529;
+        color: yellow;
+
+        border: none;
+        color: #ffff6a;
+        border: none;
+      }
+
+      .btn {
+        font-size: 30px;
+        background-color: #212529;
+        border: none;
+        color: yellow;
+      }
+      .main {
+        min-height: 700px;
+      }
+      .contenedor_imagen{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+   
+      }
+      #titulo{
+      font-family: 'Bebas Neue', sans-serif;
+      }

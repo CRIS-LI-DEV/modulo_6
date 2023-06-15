@@ -18,7 +18,10 @@
 
     <form method="post" >
         {% csrf_token %}
-        {{form.usuario}}<br>
+        <label for="">NOMBRE DE USUARIO</label><br>
+        {{form.username}}<br>
+        
+        <label for="">NOMBRE DE PASSWORD</label><br>
         {{form.password}}<br>
         <input type="submit" class="btn" value="Iniciar sesión">
     </form>

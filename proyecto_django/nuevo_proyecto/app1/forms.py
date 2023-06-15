@@ -4,7 +4,7 @@ from django.forms.widgets import PasswordInput
 from app1.models import PerfilDeUsuario
 
 class UserForm(forms.ModelForm):
-    password = forms.CharField(min_length=50,widget=PasswordInput(attrs={'placeholder': 'Ingrese su contraseña','class':'form-control'}))
+    password = forms.CharField(min_length=8,widget=PasswordInput(attrs={'placeholder': 'Ingrese su contraseña','class':'form-control'}))
 
     class Meta:
         model = User
